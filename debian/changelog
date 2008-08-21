@@ -1,26 +1,6 @@
-eigen (1.0.5-3) UNRELEASED; urgency=low
+eigen2 (2~~svn850507-1) unstable; urgency=low
 
-  * ...
+  * First upload of eigen2.
+    - for now needs to be coinstallable with eigen. Will later replace it.
 
- -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Sat, 02 Feb 2008 07:22:50 +0100
-
-eigen (1.0.5-2) unstable; urgency=low
-
-  +++ Changes by Matthew Rosewarne:
-
-  * Move Homepage: to control.
-
-  +++ Changes by Ana Beatriz Guerrero Lopez:
-
-  * Change section of libeigen-dev from libs to libdevel. (Closes: #447618)
-  * Update debhelper to 6.
-  * Update Standards-Version to 3.7.3, no changes required.
-  * Update copyright years in debian/copyright.
-
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 02 Feb 2008 07:13:27 +0100
-
-eigen (1.0.5-1) unstable; urgency=low
-
-  * Initial release (Closes: #426277)
-
- -- Sune Vuorela <debian@pusling.com>  Tue, 17 Jul 2007 16:25:55 +0200
+ -- Sune Vuorela <debian@pusling.com>  Thu, 21 Aug 2008 21:45:32 +0200

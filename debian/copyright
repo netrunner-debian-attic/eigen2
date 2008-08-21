@@ -1,45 +1,23 @@
 This package was debianized by Sune Vuorela <debian@pusling.com> on
 Sun, 27 May 2007 18:06:37 +0200.
 
-It was downloaded from <http://eigen.tuxfamily.org/>
+It was downlaoded from <svn://anonsvn.kde.org/home/kde/trunk/kdesupport/eigen2/Eigen>
 
-Upstream Authors: 
+Copyright holders:
 
-    Eigen was born at the end of July 2006.
+ Copyright (C) 2006-2008 Benoit Jacob <jacob@math.jussieu.fr>
+ Copyright (C) 2007 Michael Olbrich <michael.olbrich@gmx.net>
+ Copyright (C) 2008 Gael Guennebaud <g.gael@free.fr>
+ Copyright (C) 2008 Konstantinos Margaritis <markos@codex.gr>
 
-Lead Developer: Benoit Jacob (C) 2006-2007 <jacob@math.jussieu.fr>
-
-Contributors:
-Casper Boemann <cbr@boemann.dk>
-    project co-founder, initial code contributions
-David Faure <faure@kde.org>
-    Portability fixes
-Franz Keferboeck <franz.keferboeck@gmail.com>
-    contributions in matrixbase.h
-Carsten Niehaus <cniehaus@gmx.de>
-    helped with QTestLib, Doxygen, CMake
-Inge Wallin <inge@lysator.liu.se>
-    project co-founder, initial code contributions
-
-Special thanks to:
-Cyrille Berger, Brad Hards, Sylvain Joyeux, Thiago Macieira, Laurent Montel,
-Torsten Rahn, Pino Toscano, Eckhart Woerner
 
 
 License:
 
-NOTE: The GPL follows below, but keep in mind that Eigen is licensed under
-the GPL _plus_ an exception allowing any software to use it. The text of
-this exception, which is replicated into each of the source files of Eigen,
-is:
+Eigen is available either under GNU General Public License version 2 or later or 
+GNU Lesser General Public License Version 3 or later.
 
-// As a special exception, if other files instantiate templates or use macros
-// or inline functions from this file, or you compile this file and link it
-// with other works to produce a work based on this file, this file does not
-// by itself cause the resulting work to be covered by the GNU General Public
-// License. This exception does not invalidate any other reasons why a work
-// based on this file might be covered by the GNU General Public License.
-
+GPLv2:
 
     This package is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -56,7 +34,22 @@ is:
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
 On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL'.
+Public License can be found in `/usr/share/common-licenses/GPL-2'. 
+
+LGPLv3:
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+
+Public License can be found in `/usr/share/common-licenses/LGPL-3'. 
 
 The Debian packaging is (C) 2007-2008, Debian Qt/KDE Maintainers and
 is licensed under the GPL, see above.

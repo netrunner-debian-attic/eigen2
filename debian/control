@@ -1,4 +1,4 @@
-Source: eigen
+Source: eigen2
 Section: libdevel
 Priority: extra
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 6), cdbs (>= 0.4.51), quilt, cmake
 Standards-Version: 3.7.3
 Homepage: http://eigen.tuxfamily.org
 
-Package: libeigen-dev
+Package: libeigen2-dev
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: lightweight C++ template library for linear algebra
