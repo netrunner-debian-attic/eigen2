@@ -1,0 +1,20 @@
+Source: eigen
+Section: libdevel
+Priority: extra
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Sune Vuorela <debian@pusling.com>
+Build-Depends: debhelper (>= 6), cdbs (>= 0.4.51), quilt, cmake
+Standards-Version: 3.7.3
+Homepage: http://eigen.tuxfamily.org
+
+Package: libeigen-dev
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: lightweight C++ template library for linear algebra
+ Eigen is a lightweight C++ template library for vector and matrix math, 
+ a.k.a. linear algebra.
+ .
+ Unlike most other linear algebra libraries, Eigen focuses on the simple 
+ mathematical needs of applications: games and other OpenGL apps, spreadsheets 
+ and other office apps, etc. Eigen is dedicated to providing optimal speed 
+ with GCC.
