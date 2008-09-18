@@ -1,3 +1,9 @@
+eigen2 (2.0~beta1-1) unstable; urgency=low
+
+  * New upstream releas (beta1).
+
+ -- Sune Vuorela <debian@pusling.com>  Thu, 18 Sep 2008 22:36:04 +0200
+
 eigen2 (2~~svn850507-1) unstable; urgency=low
 
   * First upload of eigen2.
