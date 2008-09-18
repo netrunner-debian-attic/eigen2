@@ -1,6 +1,8 @@
 eigen2 (2.0~beta1-1) unstable; urgency=low
 
   * New upstream releas (beta1).
+  * Use cdbs cmake file instead of pkg-kde cdbs dir; drop quilt
+    build-dependency
 
  -- Sune Vuorela <debian@pusling.com>  Thu, 18 Sep 2008 22:36:04 +0200
 

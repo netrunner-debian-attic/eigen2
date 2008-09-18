@@ -1,4 +1,4 @@
 #! /usr/bin/make -f
 
-THIS_SHOULD_GO_TO_UNSTABLE = 1
-include debian/cdbs/kde.mk
+include /usr/share/cdbs/1/class/cmake.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
