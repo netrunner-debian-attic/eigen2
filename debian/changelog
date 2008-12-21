@@ -1,3 +1,9 @@
+eigen2 (2.0~beta2-1) unstable; urgency=low
+
+  * New upstream release (Closes: 509128)
+
+ -- Sune Vuorela <debian@pusling.com>  Sun, 21 Dec 2008 17:08:04 +0100
+
 eigen2 (2.0~beta1-1) unstable; urgency=low
 
   * New upstream releas (beta1).
