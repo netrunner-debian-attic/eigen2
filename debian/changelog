@@ -1,3 +1,14 @@
+eigen2 (2.0~beta6-1) experimental; urgency=low
+
+  * New upstream release.
+  * Eigen2 now requires cmake 2.6.2 or higher that is currently in
+  * experimental, added versioned build-depend.
+  * Add myself to Uploaders.
+  * Remove unusued lintian overrides.
+  * Update copyright: years and replace (C) with ©.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Mon, 12 Jan 2009 23:03:09 +0100
+
 eigen2 (2.0~beta2-1) unstable; urgency=low
 
   * New upstream release (Closes: 509128)
