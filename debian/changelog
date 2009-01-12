@@ -6,6 +6,7 @@ eigen2 (2.0~beta6-1) experimental; urgency=low
   * Add myself to Uploaders.
   * Remove unusued lintian overrides.
   * Update copyright: years and replace (C) with ©.
+  * Bump to Standards-Version: 3.8.0, no changes required.
 
  -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Mon, 12 Jan 2009 23:03:09 +0100
 
