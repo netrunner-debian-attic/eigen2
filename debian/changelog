@@ -1,8 +1,18 @@
+eigen2 (2.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Build and execute the test cases, but do not abort the build if a test
+    fails.
+  * Replace "Eigen" with "Eigen 2" in the long description.
+  * Add myself to Uploaders.
+
+ -- Armin Berres <trigger+debian@space-based.de>  Tue, 03 Feb 2009 00:18:48 +0100
+
 eigen2 (2.0~beta6-1) experimental; urgency=low
 
   * New upstream release.
   * Eigen2 now requires cmake 2.6.2 or higher that is currently in
-  * experimental, added versioned build-depend.
+    experimental, added versioned build-depend.
   * Add myself to Uploaders.
   * Remove unusued lintian overrides.
   * Update copyright: years and replace (C) with ©.
