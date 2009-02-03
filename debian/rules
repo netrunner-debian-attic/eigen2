@@ -7,6 +7,6 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 
 binary-post-install/libeigen2-dev::
 	echo -- Running tests. Even if one of them fails the build is not canceled.
-	cat /proc/meminfo
-	cat /proc/cpuinfo
+	-cat /proc/meminfo
+	-cat /proc/cpuinfo
 	cd ${DEB_BUILDDIR}; ctest || true
