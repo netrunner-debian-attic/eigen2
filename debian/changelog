@@ -1,7 +1,8 @@
-eigen2 (2.0-1) experimental; urgency=low
+eigen2 (2.0.0-1) experimental; urgency=low
 
   * New upstream release.
-  * Build and execute the test cases, but do not abort the build if a test fails.
+  * Build and execute the test cases, but do not abort the build if a test 
+    fails.
   * Replace "Eigen" with "Eigen 2" in the long description.
   * Change from Arch:all to Arch:any to run the testsuite.
   * Add myself to Uploaders.
