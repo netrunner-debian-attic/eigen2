@@ -5,10 +5,10 @@ It was downlaoded from <svn://anonsvn.kde.org/home/kde/trunk/kdesupport/eigen2/E
 
 Copyright holders:
 
- Copyright (C) 2006-2008 Benoit Jacob <jacob@math.jussieu.fr>
- Copyright (C) 2007 Michael Olbrich <michael.olbrich@gmx.net>
- Copyright (C) 2008 Gael Guennebaud <g.gael@free.fr>
- Copyright (C) 2008 Konstantinos Margaritis <markos@codex.gr>
+ Copyright © 2006-2008 Benoit Jacob <jacob@math.jussieu.fr>
+ Copyright © 2007 Michael Olbrich <michael.olbrich@gmx.net>
+ Copyright © 2008 Gael Guennebaud <g.gael@free.fr>
+ Copyright © 2008 Konstantinos Margaritis <markos@codex.gr>
 
 
 
@@ -51,5 +51,5 @@ LGPLv3:
 
 Public License can be found in `/usr/share/common-licenses/LGPL-3'. 
 
-The Debian packaging is (C) 2007-2008, Debian Qt/KDE Maintainers and
+The Debian packaging is © 2007-2009, Debian Qt/KDE Maintainers and
 is licensed under the GPL, see above.
