@@ -1,0 +1,12 @@
+#! /usr/bin/make -f
+
+DEB_CMAKE_EXTRA_FLAGS += -DEIGEN_BUILD_TESTS=ON -DEIGEN_TEST_NO_FORTRAN=ON -DEIGEN_TEST_NOQT=ON
+
+include /usr/share/cdbs/1/class/cmake.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+binary-post-install/libeigen2-dev::
+	echo -- Running tests. Even if one of them fails the build is not canceled.
+	cat /proc/meminfo
+	cat /proc/cpuinfo
+	cd ${DEB_BUILDDIR}; ctest || true

@@ -1,0 +1,42 @@
+eigen2 (2.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Build and execute the test cases, but do not abort the build if a test
+    fails.
+  * Replace "Eigen" with "Eigen 2" in the long description.
+  * Add myself to Uploaders.
+
+ -- Armin Berres <trigger+debian@space-based.de>  Tue, 03 Feb 2009 00:18:48 +0100
+
+eigen2 (2.0~beta6-1) experimental; urgency=low
+
+  * New upstream release.
+  * Eigen2 now requires cmake 2.6.2 or higher that is currently in
+    experimental, added versioned build-depend.
+  * Add myself to Uploaders.
+  * Remove unusued lintian overrides.
+  * Update copyright: years and replace (C) with ©.
+  * Bump to Standards-Version: 3.8.0, no changes required.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Mon, 12 Jan 2009 23:03:09 +0100
+
+eigen2 (2.0~beta2-1) unstable; urgency=low
+
+  * New upstream release (Closes: 509128)
+
+ -- Sune Vuorela <debian@pusling.com>  Sun, 21 Dec 2008 17:08:04 +0100
+
+eigen2 (2.0~beta1-1) unstable; urgency=low
+
+  * New upstream releas (beta1).
+  * Use cdbs cmake file instead of pkg-kde cdbs dir; drop quilt
+    build-dependency
+
+ -- Sune Vuorela <debian@pusling.com>  Thu, 18 Sep 2008 22:36:04 +0200
+
+eigen2 (2~~svn850507-1) unstable; urgency=low
+
+  * First upload of eigen2.
+    - for now needs to be coinstallable with eigen. Will later replace it.
+
+ -- Sune Vuorela <debian@pusling.com>  Thu, 21 Aug 2008 21:45:32 +0200
