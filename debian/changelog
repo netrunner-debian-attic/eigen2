@@ -1,3 +1,9 @@
+eigen2 (2.0.0-3) unstable; urgency=low
+
+  * Upload to unstable (for real).
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Wed, 18 Feb 2009 20:55:55 +0100
+
 eigen2 (2.0.0-2) experimental; urgency=low
 
   * Upload to unstable. 
