@@ -1,3 +1,9 @@
+eigen2 (2.0.3-2) unstable; urgency=low
+
+  * Add libeigen2-doc. 
+
+ -- Armin Berres <armin+debian@space-based.de>  Fri, 26 Jun 2009 01:19:46 +0200
+
 eigen2 (2.0.3-1) unstable; urgency=low
 
   * New upstream release
