@@ -1,19 +1,23 @@
 #! /usr/bin/make -f
 
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 DEB_CMAKE_EXTRA_FLAGS += -DEIGEN_BUILD_TESTS=ON -DEIGEN_TEST_NO_FORTRAN=ON -DEIGEN_TEST_NOQT=ON
+endif
 
 include /usr/share/cdbs/1/class/cmake.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
 
 binary-post-install/libeigen2-dev::
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	echo -- Running tests. Even if one of them fails the build is not canceled.
 	-cat /proc/meminfo
 	-cat /proc/cpuinfo
 	cd ${DEB_BUILDDIR}; ctest || true
+endif
 
-build/libeigen2-doc::
-	cd ${DEB_BUILDDIR} && make doc
+#build/libeigen2-doc::
+#	cd ${DEB_BUILDDIR} && make doc
 
-install/libeigen2-doc::
-	mkdir -p debian/libeigen2-doc/usr/share/doc/libeigen2-doc
-	cp -R ${DEB_BUILDDIR}/doc/html debian/libeigen2-doc/usr/share/doc/libeigen2-doc/
+#install/libeigen2-doc::
+#	mkdir -p debian/libeigen2-doc/usr/share/doc/libeigen2-doc
+#	cp -R ${DEB_BUILDDIR}/doc/html debian/libeigen2-doc/usr/share/doc/libeigen2-doc/

@@ -19,8 +19,8 @@ Description: lightweight C++ template library for linear algebra
  and other office apps, etc. Eigen 2 is dedicated to providing optimal speed 
  with GCC.
 
-Package: libeigen2-doc
-Architecture: any
-Recommends: libeigen2-dev
-Description: to be written
- Feel free :)
+#Package: libeigen2-doc
+#Architecture: any
+#Recommends: libeigen2-dev
+#Description: to be written
+# Feel free :)
