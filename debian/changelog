@@ -1,7 +1,7 @@
 eigen2 (2.0.4-1) unstable; urgency=low
 
   * New upstream release.
-  * Skip building the testcase if  DEB_BUILD_OPTIONS=nocheck is set
+  * Skip building the testcase if DEB_BUILD_OPTIONS=nocheck is set
     (Closes: #537408).
 
  -- Armin Berres <armin+debian@space-based.de>  Wed, 05 Aug 2009 01:41:58 +0200
