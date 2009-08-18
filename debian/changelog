@@ -16,7 +16,7 @@ eigen2 (2.0.1-1) unstable; urgency=low
 
   * New upstream release
 
- -- Armin Berres <trigger+debian@space-based.de>  Fri, 15 May 2009 13:09:51 -0400
+ -- Armin Berres <armin+debian@space-based.de>  Fri, 15 May 2009 13:09:51 -0400
 
 eigen2 (2.0.0-3) unstable; urgency=low
 
@@ -39,7 +39,7 @@ eigen2 (2.0.0-1) experimental; urgency=low
   * Change from Arch:all to Arch:any to run the testsuite.
   * Add myself to Uploaders.
 
- -- Armin Berres <trigger+debian@space-based.de>  Tue, 03 Feb 2009 13:59:54 +0100
+ -- Armin Berres <armin+debian@space-based.de>  Tue, 03 Feb 2009 13:59:54 +0100
 
 eigen2 (2.0~beta6-1) experimental; urgency=low
 
