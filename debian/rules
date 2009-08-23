@@ -15,9 +15,9 @@ ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	cd ${DEB_BUILDDIR}; ctest || true
 endif
 
-#build/libeigen2-doc::
-#	cd ${DEB_BUILDDIR} && make doc
+build/libeigen2-doc::
+	cd ${DEB_BUILDDIR} && make doc
 
-#install/libeigen2-doc::
-#	mkdir -p debian/libeigen2-doc/usr/share/doc/libeigen2-doc
-#	cp -R ${DEB_BUILDDIR}/doc/html debian/libeigen2-doc/usr/share/doc/libeigen2-doc/
+install/libeigen2-doc::
+	mkdir -p debian/libeigen2-doc/usr/share/doc/libeigen2-doc
+	cp -R ${DEB_BUILDDIR}/doc/html debian/libeigen2-doc/usr/share/doc/libeigen2-doc/

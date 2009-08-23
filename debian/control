@@ -3,14 +3,15 @@ Section: libdevel
 Priority: extra
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Sune Vuorela <debian@pusling.com>,  Ana Beatriz Guerrero Lopez <ana@debian.org>, Armin Berres <armin+debian@space-based.de>
-Build-Depends: debhelper (>= 6), cdbs (>= 0.4.51), cmake (>= 2.6.2)
-# doxygen
-Standards-Version: 3.8.0
+Build-Depends: debhelper (>= 6), cdbs (>= 0.4.51), cmake (>= 2.6.2), doxygen
+Standards-Version: 3.8.3
 Homepage: http://eigen.tuxfamily.org
 
 Package: libeigen2-dev
+Section: libdevel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: libeigen2-doc
 Description: lightweight C++ template library for linear algebra
  Eigen 2 is a lightweight C++ template library for vector and matrix math, 
  a.k.a. linear algebra.
@@ -20,8 +21,13 @@ Description: lightweight C++ template library for linear algebra
  and other office apps, etc. Eigen 2 is dedicated to providing optimal speed 
  with GCC.
 
-#Package: libeigen2-doc
-#Architecture: any
-#Recommends: libeigen2-dev
-#Description: to be written
-# Feel free :)
+Package: libeigen2-doc
+Section: doc
+Architecture: any
+Depends: ${misc:Depends}
+Suggests: libeigen2-dev
+Description: eigen2 API docmentation
+ Eigen 2 is a lightweight C++ template library for vector and matrix math,
+ a.k.a. linear algebra.
+ .
+ This package provides the complete eigen2 4 API documentation in HTML format.

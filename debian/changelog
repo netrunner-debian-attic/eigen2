@@ -1,3 +1,12 @@
+eigen2 (2.0.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add libeigen2-doc.
+  * Upgrade standards version to 3.8.3. No changes needed.
+  * Update copyrights file.
+
+ -- Armin Berres <armin+debian@space-based.de>  Sun, 23 Aug 2009 12:53:08 +0200
+
 eigen2 (2.0.4-1) unstable; urgency=low
 
   * New upstream release.
