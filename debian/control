@@ -23,7 +23,7 @@ Description: lightweight C++ template library for linear algebra
 
 Package: libeigen2-doc
 Section: doc
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}
 Suggests: libeigen2-dev
 Description: eigen2 API docmentation
