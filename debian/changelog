@@ -1,8 +1,16 @@
 eigen2 (2.0.5-2) UNRELEASED; urgency=low
 
+  +++ Ana Beatriz Guerrero Lopez:
+
   * Make libeigen-doc Arch:all.
 
- -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Mon, 24 Aug 2009 00:00:54 +0200
+  +++ Changes by Armin Berres:
+
+  * Build conflict with doxygen 1.6.0-1, it is buggy and connot build the
+    documentation (Closes: #543485).
+  * Add build dependencies texlive-latex-base and gs (Closes: #543459).
+
+ -- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 25 Aug 2009 15:45:35 +0200
 
 eigen2 (2.0.5-1) unstable; urgency=low
 
