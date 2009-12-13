@@ -1,7 +1,6 @@
 eigen2 (2.0.5-3) UNRELEASED; urgency=low
 
-  +++ Changes by Ana Beatriz Guerrero Lopez:
-
+  [ Ana Beatriz Guerrero Lopez ]
   * Remove myself from Uploaders.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 26 Aug 2009 15:56:23 +0200
