@@ -4,10 +4,10 @@ Sun, 27 May 2007 18:06:37 +0200.
 It was downlaoded from <http://eigen.tuxfamily.org>
 
 Copyright holders:
- Copyright © 2006-2008 Benoit Jacob <jacob@math.jussieu.fr>
+ Copyright © 2006-2009 Benoit Jacob <jacob@math.jussieu.fr>
  Copyright © 2007 Michael Olbrich <michael.olbrich@gmx.net>
- Copyright © 2008 Gael Guennebaud <g.gael@free.fr>
- Copyright © 2008 Konstantinos Margaritis <markos@codex.gr>
+ Copyright © 2008-2009 Gael Guennebaud <g.gael@free.fr>
+ Copyright © 2008-2009 Konstantinos Margaritis <markos@codex.gr>
 
 unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h and
 unsupported/Eigen/src/IterativeSolvers/IterationController.h:
