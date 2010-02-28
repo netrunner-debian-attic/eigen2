@@ -1,6 +1,6 @@
 eigen2 (2.0.12-1) UNRELEASED; urgency=low
 
-  * New upstream release.
+  * New upstream release. (Closes: #570961)
 
   [ Lisandro Damián Nicanor Pérez Meyer]
   * Bumped standars to 3.8.4.0, no changes needed.
