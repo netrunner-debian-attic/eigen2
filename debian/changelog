@@ -1,4 +1,4 @@
-eigen2 (2.0.12-1) UNRELEASED; urgency=low
+eigen2 (2.0.12-1) unstable; urgency=low
 
   * New upstream release. (Closes: #570961)
 
@@ -6,13 +6,10 @@ eigen2 (2.0.12-1) UNRELEASED; urgency=low
   * Bumped standars to 3.8.4.0, no changes needed.
   * Updated copyright file.
 
-  [ Ana Beatriz Guerrero Lopez ]
-  * Remove myself from Uploaders.
-
   [ Pino Toscano ]
   * Install the eigen2.pc pkgconfig file.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 02 Mar 2010 20:08:48 +0100
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Wed, 21 Apr 2010 03:20:17 +0200
 
 eigen2 (2.0.5-2) unstable; urgency=low
 
