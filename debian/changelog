@@ -1,3 +1,9 @@
+eigen2 (2.0.14-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Sun, 27 Jun 2010 13:43:26 +0200
+
 eigen2 (2.0.12-1) unstable; urgency=low
 
   * New upstream release. (Closes: #570961)
