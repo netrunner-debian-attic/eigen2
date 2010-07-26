@@ -1,3 +1,9 @@
+eigen2 (2.0.14-2) UNRELEASED; urgency=low
+
+  * Add Vcs fields to debian/control.
+
+ -- Modestas Vainius <modax@debian.org>  Mon, 26 Jul 2010 23:33:19 +0300
+
 eigen2 (2.0.14-1) unstable; urgency=low
 
   * New upstream release.
