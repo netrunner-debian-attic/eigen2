@@ -8,8 +8,9 @@ eigen2 (2.0.15-1) unstable; urgency=low
   [ Ana Beatriz Guerrero Lopez ]
   * Fix FTBFS in hppa, patch build-snippets-with-O2. (Closes: #591576)
     It workarounds some kind of problem with the compiler flags order.
+  * Update to Standards-Version 3.9.1, no changes required.
 
- -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Thu, 05 Aug 2010 11:06:44 -0400
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Thu, 05 Aug 2010 11:40:59 -0400
 
 eigen2 (2.0.14-1) unstable; urgency=low
 
