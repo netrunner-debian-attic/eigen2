@@ -1,0 +1,15 @@
+This fixes the FTBFS in hppa:
+https://buildd.debian.org/fetch.cgi?&pkg=eigen2&ver=2.0.14-1&arch=hppa&stamp=1279087164&file=log
+Apparently, it workarounds some kind of problem with the compiler flags order.
+Bug #591576.
+--- a/doc/CMakeLists.txt
++++ b/doc/CMakeLists.txt
+@@ -3,7 +3,7 @@ set_directory_properties(PROPERTIES EXCL
+ 
+ if(CMAKE_COMPILER_IS_GNUCXX)
+   if(CMAKE_SYSTEM_NAME MATCHES Linux)
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O1 -g1")
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -g1")
+   endif(CMAKE_SYSTEM_NAME MATCHES Linux)
+ endif(CMAKE_COMPILER_IS_GNUCXX)
+ 
