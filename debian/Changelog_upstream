@@ -1,0 +1,234 @@
+== Eigen 2.0.16 ==
+
+Released May 28, 2011
+
+Changes since 2.0.15:
+
+* Fix bug in 3x3 tridiagonlisation (and consequently in 3x3 selfadjoint eigen decomposition).
+* Fix compilation for new gcc 4.6.
+* Fix performance regression since 2.0.12: in some matrix-vector product, complex matrix expressions were not pre-evaluated.
+* Fix documentation of Least-Square.
+* New feature: support for part<SelfAdjoint>.
+* Fix bug in SparseLU::setOrderingMethod.
+
+== Eigen 2.0.15 ==
+
+Released July 16, 2010
+
+Changes since 2.0.14:
+
+* Fix bug: certain cases of matrix-vector product (depending on storage order) were blocked by an assertion failure.
+* Fix LU and QR solve when rank==0, fix LLT when the matrix is purely 0.
+* Fix a couple of bugs with QR solving especially with rows>cols.
+* Fix bug with custom scalar types that have non-trivial destructor.
+* Fix for ICC in SSE code.
+* Fix some C++ issues found by Clang (patch by Nick Lewycky).
+
+== Eigen 2.0.14 ==
+
+Released June 22, 2010
+
+Changes since 2.0.13:
+
+* Fix #141: crash in SSE (alignment problem) when using dynamic-size matrices with a max-size fixed at compile time that is not a multiple of 16 bytes. For example, Matrix<double,Dynamic,Dynamic,AutoAlign,5,5>.
+* Fix #142: LU of fixed-size matrices was causing dynamic memory allocation (patch by Stuart Glaser).
+* Fix #127: remove useless static keywords (also fixes warnings with clang++).
+
+== Eigen 2.0.13 ==
+
+Released June 10, 2010
+
+Changes since 2.0.12:
+
+* Fix #132: crash in certain matrix-vector products. Unit test added.
+* Fix #125: colwise norm() and squaredNorm() on complex types do not return real types
+* Fully support the QCC/QNX compiler (thanks to Piotr Trojanek). The support in 2.0.12 was incomplete. The whole test suite is now successful.
+* As part of the QCC support work, a lot of standards compliance work: put std:: in front of a lot of things such as size_t, check whether the math library needs to be linked to explicitly...
+* Fix precision issues in LDLT. The isPositiveDefinite() method is now always returning true, but it was conceptually broken anyway, since a non-pivoting LDLT decomposition can't know that.
+* Compilation fix in ldlt() on expressions.
+* Actually install the Eigen/Eigen and Eigen/Dense public headers!
+* Fix readcost for complex types.
+* Fix compilation of the BTL benchmarks.
+* Some dox updates.
+
+== Eigen 2.0.12 ==
+
+Released February 12, 2010
+
+Changes since 2.0.11:
+
+* EIGEN_DEFAULT_TO_ROW_MAJOR is fully supported and tested.
+* Several important fixes for row-major matrices.
+* Fix support of several algorithms for mixed fixed-dynamic size matrices where the fixed dimension is greater than the dynamic dimension. For example: Matrix<float,3,Dynamic>(3,2)
+* fix EIGEN_DONT_ALIGN: now it _really_ disables vectorization (was giving a #error unless you also used EIGEN_DONT_VECTORIZE).
+* Fix #92: Support QNX's QCC compiler (patch by Piotr Trojanek)
+* Fix #90, missing type cast in LU, allow to use LU with MPFR (patch by 'Wolf').
+* Fix ICC compiler support: work around a bug present at least in ICC 11.1.
+* Compilation fixes for computeInverse() on expressions.
+* Fix a gap in a unit-test (thanks to Jitse Niesen)
+* Backport improvements to benchmarking code.
+* Documentation fixes
+
+== Eigen 2.0.11 ==
+
+Released January 10, 2010
+
+Changes since 2.0.10:
+
+* Complete rewrite of the 4x4 matrix inversion: we now use the usual cofactors approach, so no numerical stability problems anymore (bug #70)
+* Still 4x4 matrix inverse: SSE path for the float case, borrowing code by Intel, giving very high performance.
+* Fix crash happening on 32-bit x86 Linux with SSE, when double's were created at non-8-byte-aligned locations (bug #79).
+* Fix bug in Part making it crash in certain products (bug #80).
+* Precision improvements in Quaternion SLERP (bug #71).
+* Fix sparse triangular solver for lower/row-major matrices (bug #74).
+* Fix MSVC 2010 compatibility.
+* Some documentation improvements.
+
+== Eigen 2.0.10 ==
+
+Released November 25, 2009
+
+Changes since 2.0.9:
+
+* Rewrite 4x4 matrix inverse to improve precision, and add a new unit test to guarantee that precision. It's less fast, but it's still faster than the cofactors method.
+* Fix bug #62: crash in SSE code with MSVC 2008 (Thanks to Hauke Heibel).
+* Fix bug #65: MatrixBase::nonZeros() was recursing infinitely
+* Fix PowerPC platform detection on Mac OSX.
+* Prevent the construction of bogus MatrixBase objects and generate good compilation errors for that. Done by making the default constructor protected, and adding some private constructors.
+* Add option to initialize all matrices by zero: just #define EIGEN_INITIALIZE_MATRICES_BY_ZERO
+* Improve Map documentation
+* Install the pkg-config file to share/pkgconfig, instead of lib/pkgconfig (thanks to Thomas Capricelli)
+* fix warnings
+* fix compilation with MSVC 2010
+* adjust to repository name change
+
+== Eigen 2.0.9 ==
+
+Released October 24, 2009
+
+Changes since 2.0.8:
+
+* Really fix installation and the pkg-config file.
+* Install the NewStdVector header that was introduced in 2.0.6.
+
+== Eigen 2.0.8 ==
+
+Released October 23, 2009
+
+Changes since 2.0.7:
+
+* fix installation error introduced in 2.0.7: it was choking on the pkg-config file eigen2.pc not being found. The fix had been proposed long ago by Ingmar Vanhassel for the development branch, and when recently the pkg-config support was back-ported to the 2.0 branch, nobody thought of backporting this fix too, and apparently nobody tested "make install" !
+* SVD: add default constructor. Users were relying on the compiler to generate one, and apparenty 2.0.7 triggered a little MSVC 2008 subtlety in this respect. Also added an assert.
+
+== Eigen 2.0.7 ==
+
+Released October 22, 2009
+
+Changes since 2.0.6:
+
+* fix bug #61: crash when using Qt QVector on Windows 32-bit. By Hauke Heibel.
+* fix bug #10: the reallocateSparse function was half coded
+* fix bug in SparseMatrix::resize() not correctly initializing by zero
+* fix another bug in SparseMatrix::resize() when outerSize==0. By Hauke Heibel.
+* fully support GCC 3.3. It was working in 2.0.2, there was a compilation error in 2.0.6, now for the first time in 2.0.7 it's 100% tested (the test suite passes without any errors, warnings, or failed tests).
+* SVD: add missing assert (help catch mistakes)
+* fixed warnings in unit-tests (Hauke Heibel)
+* finish syncing Memory.h with the devel branch. This is cleaner and fixes a warning. The choice of system aligned malloc function may be affected by this change.
+* add pkg-config support by Rhys Ulerich.
+* documentation fix and doc-generation-script updates by Thomas Capricelli
+
+== Eigen 2.0.6 ==
+
+Released September 23, 2009
+
+Changes since 2.0.5:
+
+* fix bug: visitors didn't work on row-vectors.
+* fix bug #50: compilation errors with swap().
+* fix bug #42: Add Transform::Identity() as mentioned in the tutorial.
+* allow to disable all alignment code by defining EIGEN_DONT_ALIGN (backport from devel branch).
+* backport the devel branch's StdVector header as NewStdVector. You may also #define EIGEN_USE_NEW_STDVECTOR to make StdVector use it automatically. However, by default it isn't used by StdVector, to preserve compatibility.
+* Vectorized quaternion product (for float) by Rohit Garg (backport from devel branch).
+* allow to override EIGEN_RESTRICT and add EIGEN_DONT_USE_RESTRICT_KEYWORD
+* fix a warning in ei_aligned_malloc; fixed by backporting the body from the devel branch; may result in a different choice of system aligned malloc function.
+* update the documentation.
+
+== Eigen 2.0.5 ==
+
+Released August 22, 2009
+
+Changes since 2.0.4:
+
+* fix bug: in rare situations involving mixed storage orders, a matrix product could be evaluated as its own transpose
+* fix bug: LU::solve() crashed when called on the LU decomposition of a zero matrix
+* fix bug: EIGEN_STACK_ALLOCATION_LIMIT was too high, resulting in stack overflow for a user. Now it is set as in the devel branch.
+* fix compilation bug: our StdVector header didn't work with GCC 4.1. (Bug #41)
+* fix compilation bug: missing return statement in Rotation2D::operator*= (Bug #36)
+* in StdVector, a more useful #error message about the #including order
+* add EIGEN_TRANSFORM_PLUGIN allowing to customize the Transform class
+* fix a warning with MSVC
+* fix a bug in our cmake code when building unit-tests (thanks to Marcus Hanwell)
+* work around a bug in cmake that made it fail to build unit-tests when fortran wasn't installed
+* in our cmake code, remove the part about retrieving the mercurial info and appending it to the version number in the dox
+* dox: remove the old example list
+* fix the option to build a binary library, although it's not very useful and will be removed
+* add basic .hgignore file and script to build the docs (thanks to Thomas Capricelli)
+
+== Eigen 2.0.4 ==
+
+Released August 1, 2009
+
+Changes since 2.0.3:
+* Several fixes in the overloaded new and delete operators. Thanks to Hauke Heibel.
+* compilation fix: add the missing ei_atan2 function. Thanks to Manuel Yguel.
+* Use ei_atan2 instead of using std::atan2 directly.
+* several compilation fixes in the Qt interoperability code: methods toQTransform() and toQMatrix(). Thanks to Anthony Truchet.
+* compilation fix and simplification in Matrix assignment
+* compilation fixes in "a *= b" and  "a=a*b" when a has to be resized.
+* remove a "stupid" version of ei_pow. for integers for gcc >= 4.3
+* bug fix in Quaternion::setFromTwoVectors()
+* several ctest improvements: use our own dashboard, use a separate project for the 2.0 branch.
+* documentation: improvement on the pages on unaligned arrays (the online copies have been updated immediately).
+
+== Eigen 2.0.3 ==
+
+Released June 21, 2009
+
+Changes since 2.0.2:
+* precision and reliability fixes in various algorithms, especially LLT, QR, Tridiagonalization, and also a precision improvement in LU.
+* fix LLT and LDLT solve() on uninitialized result (was causing an assertion).
+* add Eigen/Eigen and Eigen/Dense headers for convenience
+* document a newly found cause for the "unaligned array" assertion
+* backport documentation improvements on transpose() and adjoint()
+* updates in the Sparse module (was needed to support KDE 4.3)
+
+== Eigen 2.0.2 ==
+
+Released May 22, 2009
+
+Changes since 2.0.1:
+* Fix linearRegression() compilation, actually it is reimplemented using the better fitHyperplane() which does total least-squares.
+* Add missing setZero() etc... variants taking size parameters and resizing. These were mentioned in the tutorial but weren't implemented.
+* Fix posix_memalign platform check. This fixes portability issues. Thanks to Ross Smith.
+* Fix detection of SSE2 on the Windows 64-bit platform.
+* Fix compatibility with the old GCC 3.3: it is now fully supported again.
+* Fix warnings with recent GCC (4.4.0 and 4.3.3).
+
+== Eigen 2.0.1 ==
+
+Released April 14, 2009
+
+Changes since 2.0.0:
+* disable alignment altogether on exotic platforms on which we don't vectorize anyway. This allows e.g. to use Eigen on ARM platforms.
+* new StdVector header with a new workaround for the problems with std::vector.
+* workarounds for MSVC internal compiler errors
+* MSVC 9 compilation fix (patch by Hauke Heibel)
+* fixes for various bugs in Maps/Blocks that could give wrong results
+* fix bug in 4x4 matrix inverse that could give wrong results
+* compilation fix in SliceVectorization
+* fix wrong static assertion (patch by Markus Moll)
+* add missing operators in aligned_allocator (thanks to Hauke Heibel)
+
+== Eigen 2.0.0 ==
+
+Released February 2, 2009
