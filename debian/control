@@ -5,7 +5,7 @@ Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Sune Vuorela <debian@pusling.com>, Armin Berres <armin+debian@space-based.de>, Ana Beatriz Guerrero Lopez <ana@debian.org>
 Build-Depends: debhelper (>= 6), cdbs (>= 0.4.51), cmake (>= 2.6.2), quilt, doxygen, texlive-latex-base, ghostscript
 Build-Conflicts: doxygen (= 1.6.0-1)
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://eigen.tuxfamily.org
 Vcs-Git: git://git.debian.org/pkg-kde/kde-req/eigen2.git
 Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-req/eigen2.git
