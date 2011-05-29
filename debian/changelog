@@ -1,5 +1,6 @@
 eigen2 (2.0.16-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * Update to Standards-Version 3.9.2 (no changes).
   * Switch to 3.0 (quilt) format.
   * Add doc-base file for documentation.
