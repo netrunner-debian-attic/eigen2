@@ -2,7 +2,7 @@
 BUILDDIR = $(CURDIR)/debian/build
 
 %:
-	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR}
+	dh $@ --buildsystem=cmake --builddirectory=$(BUILDDIR)
 
 override_dh_installchangelogs:
 	dh_installchangelogs debian/Changelog_upstream
@@ -11,7 +11,7 @@ override_dh_auto_test:
 	echo -- Running tests. Even if one of them fails the build is not canceled.
 	-cat /proc/meminfo
 	-cat /proc/cpuinfo
-	cd ${BUILDDIR}; cmake -DEIGEN_BUILD_TESTS=ON ../../; $(MAKE); ctest || true
+	cd $(BUILDDIR); cmake -DEIGEN_BUILD_TESTS=ON ../../; $(MAKE); ctest || true
 
 override_dh_auto_build:
-	cd ${BUILDDIR}; $(MAKE) doc
+	cd $(BUILDDIR); $(MAKE) doc
