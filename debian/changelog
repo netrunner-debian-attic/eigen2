@@ -14,8 +14,9 @@ eigen2 (2.0.16-1) UNRELEASED; urgency=low
   * Switch debian/rules from cdbs to debhelper.
   * Add .links file to prevent lintian warnings.
   * Remove quilt and cdbs from BD.
+  * Update debian/copyright to DEP-5.
 
- -- Anton Gladky <gladky.anton@gmail.com>  Sun, 29 May 2011 13:41:02 +0200
+ -- Anton Gladky <gladky.anton@gmail.com>  Sun, 29 May 2011 19:52:59 +0200
 
 eigen2 (2.0.15-1) unstable; urgency=low
 
