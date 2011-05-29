@@ -1,3 +1,22 @@
+eigen2 (2.0.16-1) UNRELEASED; urgency=low
+
+  * Update to Standards-Version 3.9.2 (no changes).
+  * Switch to 3.0 (quilt) format.
+  * Add doc-base file for documentation.
+  * Add lintian-overrides to escape source-contains-hg-tags-file warning.
+  * Remove extra "Section: libdevel" in debian/control.
+  * Add debian/watch file.
+  * Add upstream changelog.
+  * Add libeigen2-doc.docs.
+  * Change debian/compat to 8.
+  * Raise up minimal debhelper version to 8.
+  * Simplify libeigen2-dev.install.
+  * Switch debian/rules from cdbs to debhelper.
+  * Add .links file to prevent lintian warnings.
+  * Remove quilt and cdbs from BD.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Sun, 29 May 2011 13:41:02 +0200
+
 eigen2 (2.0.15-1) unstable; urgency=low
 
   * New upstream release.
