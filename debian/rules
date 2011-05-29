@@ -1,26 +1,24 @@
 #! /usr/bin/make -f
+BUILDDIR = $(CURDIR)/debian/build
 
-DEB_DH_INSTALL_SOURCEDIR := debian/tmp
+%:
+	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR}
 
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-DEB_CMAKE_EXTRA_FLAGS += -DEIGEN_BUILD_TESTS=ON -DEIGEN_TEST_NO_FORTRAN=ON -DEIGEN_TEST_NOQT=ON
-endif
+override_dh_installchangelogs:
+	dh_installchangelogs debian/Changelog_upstream
 
-include /usr/share/cdbs/1/class/cmake.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/patchsys-quilt.mk
-
-binary-post-install/libeigen2-dev::
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+override_dh_auto_test:
 	echo -- Running tests. Even if one of them fails the build is not canceled.
 	-cat /proc/meminfo
 	-cat /proc/cpuinfo
-	cd ${DEB_BUILDDIR}; ctest || true
-endif
+	cd ${BUILDDIR}; cmake -DEIGEN_BUILD_TESTS=ON ../../; $(MAKE); ctest || true
 
-build/libeigen2-doc::
-	cd ${DEB_BUILDDIR} && make doc
+binary-indep: 
+	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR} --before dh_auto_build
+	cd ${BUILDDIR}; $(MAKE) doc
+	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR} --after dh_auto_build
 
-install/libeigen2-doc::
-	mkdir -p debian/libeigen2-doc/usr/share/doc/libeigen2-doc
-	cp -R ${DEB_BUILDDIR}/doc/html debian/libeigen2-doc/usr/share/doc/libeigen2-doc/
+binary-arch: 
+	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR}
+
+binary: binary-indep binary-arch
