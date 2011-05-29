@@ -1,4 +1,4 @@
-eigen2 (2.0.16-1) UNRELEASED; urgency=low
+eigen2 (2.0.16-1) unstable; urgency=low
 
   * New upstream release.
   * Update to Standards-Version 3.9.2 (no changes).
@@ -17,7 +17,7 @@ eigen2 (2.0.16-1) UNRELEASED; urgency=low
   * Remove quilt and cdbs from BD.
   * Update debian/copyright to DEP-5.
 
- -- Anton Gladky <gladky.anton@gmail.com>  Sun, 29 May 2011 19:52:59 +0200
+ -- Anton Gladky <gladky.anton@gmail.com>  Mon, 30 May 2011 00:42:06 +0300
 
 eigen2 (2.0.15-1) unstable; urgency=low
 
