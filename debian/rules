@@ -13,12 +13,5 @@ override_dh_auto_test:
 	-cat /proc/cpuinfo
 	cd ${BUILDDIR}; cmake -DEIGEN_BUILD_TESTS=ON ../../; $(MAKE); ctest || true
 
-binary-indep: 
-	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR} --before dh_auto_build
+override_dh_auto_build:
 	cd ${BUILDDIR}; $(MAKE) doc
-	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR} --after dh_auto_build
-
-binary-arch: 
-	dh $@ --buildsystem=cmake --builddirectory=${BUILDDIR}
-
-binary: binary-indep binary-arch
