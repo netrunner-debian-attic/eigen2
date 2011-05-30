@@ -16,6 +16,8 @@ eigen2 (2.0.16-1) unstable; urgency=low
   * Add .links file to prevent lintian warnings.
   * Remove quilt and cdbs from BD.
   * Update debian/copyright to DEP-5.
+  * replace doxygen and texlive-* build dependencies with 
+    doxygen-latex. (Closes: #616212)
 
  -- Anton Gladky <gladky.anton@gmail.com>  Mon, 30 May 2011 00:42:06 +0300
 
