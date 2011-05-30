@@ -1,3 +1,9 @@
+eigen2 (2.0.16-22) UNRELEASED; urgency=low
+
+  * Disable qr-test due to failing its compilation on ARM.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Mon, 30 May 2011 20:49:56 +0200
+
 eigen2 (2.0.16-1) unstable; urgency=low
 
   * New upstream release.
