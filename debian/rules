@@ -18,7 +18,7 @@ override_dh_auto_test:
 	echo -- Running tests. Even if one of them fails the build is not canceled.
 	-cat /proc/meminfo
 	-cat /proc/cpuinfo
-	dh_auto_test || true
+	dh_auto_test -- ARGS=-VV || true
 
 override_dh_auto_build:
 	dh_auto_build

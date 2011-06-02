@@ -1,8 +1,9 @@
 eigen2 (2.0.16-2) UNRELEASED; urgency=low
 
   * Disable qr-test due to failing its compilation on ARM.
+  * Enable extra-verbose mode for tests.
 
- -- Anton Gladky <gladky.anton@gmail.com>  Mon, 30 May 2011 20:49:56 +0200
+ -- Anton Gladky <gladky.anton@gmail.com>  Thu, 02 Jun 2011 08:59:16 +0200
 
 eigen2 (2.0.16-1) unstable; urgency=low
 
