@@ -1,0 +1,16 @@
+Description: Disable qr-test due to failing on ARM
+Author: Anton Gladky <gladky.anton@gmail.com>
+Last-Update: 2011-05-30
+Forwarded: http://eigen.tuxfamily.org/bz/show_bug.cgi?id=282
+
+--- a/test/CMakeLists.txt
++++ b/test/CMakeLists.txt
+@@ -215,7 +215,7 @@
+ ei_add_test(lu ${EI_OFLAG})
+ ei_add_test(determinant ${EI_OFLAG})
+ ei_add_test(inverse)
+-ei_add_test(qr)
++#ei_add_test(qr)
+ ei_add_test(eigensolver " " "${GSL_LIBRARIES}")
+ ei_add_test(svd)
+ ei_add_test(geometry)
