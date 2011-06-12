@@ -6,6 +6,7 @@ eigen2 (2.0.16-2) UNRELEASED; urgency=low
 
   [ Modestas Vainius ]
   * Use relative path in builddirectory option.
+  * Add myself to Uploaders.
 
  -- Anton Gladky <gladky.anton@gmail.com>  Thu, 02 Jun 2011 08:59:16 +0200
 
