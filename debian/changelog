@@ -1,4 +1,4 @@
-eigen2 (2.0.16-2) UNRELEASED; urgency=low
+eigen2 (2.0.16-2) unstable; urgency=low
 
   [ Anton Gladky ]
   * Disable qr-test due to failing its compilation on ARM.
@@ -9,7 +9,7 @@ eigen2 (2.0.16-2) UNRELEASED; urgency=low
   * Add myself to Uploaders.
   * Move doxygen-latex to Build-Depends-Indep, adjust rules accordingly.
 
- -- Anton Gladky <gladky.anton@gmail.com>  Thu, 02 Jun 2011 08:59:16 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 12 Jun 2011 17:14:02 +0300
 
 eigen2 (2.0.16-1) unstable; urgency=low
 
