@@ -3,7 +3,8 @@ Section: libdevel
 Priority: extra
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Sune Vuorela <debian@pusling.com>, Armin Berres <armin+debian@space-based.de>, Ana Beatriz Guerrero Lopez <ana@debian.org>, Anton Gladky <gladky.anton@gmail.com>, Modestas Vainius <modax@debian.org>
-Build-Depends: debhelper (>= 8), cmake (>= 2.6.2), doxygen-latex, ghostscript
+Build-Depends: debhelper (>= 8), cmake (>= 2.6.2), ghostscript
+Build-Depends-Indep: doxygen-latex
 Build-Conflicts: doxygen (= 1.6.0-1)
 Standards-Version: 3.9.2
 Homepage: http://eigen.tuxfamily.org

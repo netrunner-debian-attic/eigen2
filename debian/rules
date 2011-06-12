@@ -23,5 +23,5 @@ override_dh_auto_test:
 override_dh_auto_build:
 	dh_auto_build
 ifneq (,$(findstring libeigen2-doc, $(shell dh_listpackages)))
-	dh_auto_build -- doc
+	if [ -n "`which doxygen`" ]; then dh_auto_build -- doc; fi
 endif
