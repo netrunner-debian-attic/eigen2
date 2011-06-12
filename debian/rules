@@ -1,5 +1,5 @@
 #! /usr/bin/make -f
-BUILDDIR = $(CURDIR)/debian/build
+BUILDDIR = debian/build
 
 %:
 	dh $@ --buildsystem=cmake --builddirectory=$(BUILDDIR)

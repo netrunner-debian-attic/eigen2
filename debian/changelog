@@ -1,7 +1,11 @@
 eigen2 (2.0.16-2) UNRELEASED; urgency=low
 
+  [ Anton Gladky ]
   * Disable qr-test due to failing its compilation on ARM.
   * Enable extra-verbose mode for tests.
+
+  [ Modestas Vainius ]
+  * Use relative path in builddirectory option.
 
  -- Anton Gladky <gladky.anton@gmail.com>  Thu, 02 Jun 2011 08:59:16 +0200
 
