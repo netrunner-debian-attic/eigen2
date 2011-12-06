@@ -1,3 +1,12 @@
+== Eigen 2.0.17 ==
+
+Released December 6, 2011
+
+Changes since 2.0.16:
+
+* Fix a compilation bug in aligned_allocator: the allocate method should take a void pointer
+* Fix a typo in ParametrizedLine documentation
+
 == Eigen 2.0.16 ==
 
 Released May 28, 2011
