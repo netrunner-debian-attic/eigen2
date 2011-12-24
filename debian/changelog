@@ -1,7 +1,7 @@
 eigen2 (2.0.17-1) unstable; urgency=low
 
   * Move Eigen2 API documentation to the Programming/C++ doc-base section.
-  * Update copyright-file. Clean lintian-warning.
+  * Update copyright-file. Clean warning (syntax-error-in-dep5-copyright).
 
  -- Anton Gladky <gladky.anton@gmail.com>  Mon, 12 Dec 2011 22:18:11 +0100
 
