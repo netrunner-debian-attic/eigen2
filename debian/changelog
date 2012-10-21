@@ -1,6 +1,7 @@
 eigen2 (2.0.17-2) UNRELEASED; urgency=low
 
-
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add myself to Uploaders.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 21 Oct 2012 09:35:47 -0300
 
