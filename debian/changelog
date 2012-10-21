@@ -1,3 +1,9 @@
+eigen2 (2.0.17-2) UNRELEASED; urgency=low
+
+
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 21 Oct 2012 09:35:47 -0300
+
 eigen2 (2.0.17-1) unstable; urgency=low
 
   * New upstream release.
