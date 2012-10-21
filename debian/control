@@ -29,7 +29,7 @@ Section: doc
 Architecture: all
 Depends: ${misc:Depends}
 Suggests: libeigen2-dev
-Description: eigen2 API docmentation
+Description: eigen2 API documentation
  Eigen 2 is a lightweight C++ template library for vector and matrix math,
  a.k.a. linear algebra.
  .
